@@ -1,5 +1,5 @@
 import os
-from imports.config import install_folder
+from config import install_folder
 from pathlib import Path
 
 
@@ -73,5 +73,5 @@ class ProgramInstallation:
 
 
 # ProgramInstallation().uninstall()
-# ProgramInstallation().install()
+ProgramInstallation().install()
 # ProgramInstallation().update()
