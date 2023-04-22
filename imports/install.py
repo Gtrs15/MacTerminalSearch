@@ -69,7 +69,3 @@ class ProgramInstallation:
     def check_if_installed(self):
         pass
 
-
-# ProgramInstallation().uninstall()
-ProgramInstallation().install()
-# ProgramInstallation().update()
