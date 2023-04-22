@@ -16,7 +16,7 @@ class BrowserLauncher:
             "chrome": "open -a /Applications/Google\ Chrome.app %s",
             "firefox": "open -a /Applications/Firefox.app %s",
             "gx": "open -a /Applications/Opera\ GX.app %s",
-            "safari": "open -a /Applications/Safari %s"
+            "safari": "open -a /Applications/Safari.app %s"
         }
 
         self.browser_selection = browser_selection
