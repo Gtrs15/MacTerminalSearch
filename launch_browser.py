@@ -3,6 +3,7 @@ import webbrowser
 from settings_storage import JsonStorage
 from logs.create_logger import logs
 from imports.config import help_message
+from imports.install import ProgramInstallation
 
 
 class BrowserLauncher:
@@ -104,6 +105,18 @@ class BrowserLauncher:
             site_list = settings.read_json()['site_list']
             print('Current Site List:')
             print(*[x for x in site_list.keys()])
+
+        # Update App
+        if self.flag == '--update':
+            print('MacTerminalSearch will now update.')
+            ProgramInstallation().update()
+            print('Update Complete')
+
+        # Uninstall App
+        if self.flag == '--uninstall':
+            print('MacTerminalSearch will now uninstall. Thank you for using my app.')
+            ProgramInstallation().uninstall()
+            print('Removal Complete')
 
     # Run the program
     def launch_search(self):
