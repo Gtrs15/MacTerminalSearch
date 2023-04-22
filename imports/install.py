@@ -10,12 +10,10 @@ class ProgramInstallation:
         # Define App Folder
         self.app_folder = install_folder
         # Define alias message
-        self.alias_message = f"\"python3 {self.app_folder}/start_search.py\""
+        self.alias_message = f"\"python3 {self.app_folder}/start.py\""
         # Define alias string to add to zshrc
         self.alias_to_add_to_zshrc = f'alias ts={self.alias_message}'
 
-        # List of files to copy
-        self.file_list_to_copy = 'config.py create_logs.py start_search.py storage.py terminalSearch.py'
         # Define git repo to clone
         self.gitRepo = 'https://github.com/Gtrs15/MacTerminalSearch.git'
 
