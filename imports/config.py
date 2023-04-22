@@ -23,4 +23,8 @@ Welcome to terminalSearch
 
   ts -a <SITE_URL>: add a site to the site list (Do not need https or WWW in URL)
     Example: ts -a stackoverflow.com
+
+  ts --update : This will remove and then re-insall the MacTerminalSearch App
+  
+  ts --uninstall : This will remove the MacTerminalSearch App and all config files
 '''
