@@ -1,5 +1,5 @@
 import os
-from config import app_folder
+from config import install_folder
 from pathlib import Path
 
 
@@ -8,7 +8,7 @@ class ProgramInstallation:
     def __init__(self) -> None:
 
         # Define App Folder
-        self.app_folder = app_folder
+        self.app_folder = install_folder
         # Define alias message
         self.alias_message = f"\"python3 {self.app_folder}/start_search.py\""
         # Define alias string to add to zshrc
@@ -17,7 +17,7 @@ class ProgramInstallation:
         # List of files to copy
         self.file_list_to_copy = 'config.py create_logs.py start_search.py storage.py terminalSearch.py'
         # Define git repo to clone
-        self.gitRepo = 'https://github.com/Gtrs15/terminalSearch.git'
+        self.gitRepo = 'https://github.com/Gtrs15/MacTerminalSearch.git'
 
     def install(self):
         self.clone_repo_to_empty_folder()
