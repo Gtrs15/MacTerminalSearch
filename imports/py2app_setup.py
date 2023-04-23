@@ -1,6 +1,6 @@
 from setuptools import setup
 
-APP = ['imports/install.py']
+APP = ['run_installation.py']
 OPTIONS = {
     'argv_emulation': True,
 }
