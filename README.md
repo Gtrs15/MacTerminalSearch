@@ -6,8 +6,12 @@ Type your entire search without leaving your editor/terminal.
 
 ## Installation
 
-The app can be installed from the .dmg file.  
-If you would prefer to clone it, here are the instructions:
+[The app can be installed from the zip file contained in the release.](https://github.com/Gtrs15/MacTerminalSearch/releases/tag/Initial_Release)
+
+After you run the .app file, you can launch any new instance of terminal and use the command ```ts``` to use the app.
+
+
+If you would prefer to manually install, here are the instructions:
 
 Run the following command.
 
