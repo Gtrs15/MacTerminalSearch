@@ -8,6 +8,7 @@ Type your entire search without leaving your editor/terminal.
 
 The app can be installed from the .dmg file.  
 If you would prefer to clone it, here are the instructions:
+
 Run the following command.
 
 	git clone https://github.com/Gtrs15/MacTerminalSearch.git /Users/Shared/.MacTerminalSearch
