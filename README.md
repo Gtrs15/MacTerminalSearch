@@ -21,7 +21,7 @@ Any alias can be used if you are already using ```ts``` for something else.
 
 ## Options
 
-```-g``` Used to do a normal google search and not limit search to site list
+```-g``` Used to do a normal google search and not limit search to site list.
 
 Example usage: ts -g python selenium documentation
 
@@ -33,8 +33,8 @@ Example usage: ts -d stackoverflow (can also use any non-blank string to check s
 
 Example usage: ts -a stackoverflow.com
 
-```--update``` : This will remove and then re-install the MacTerminalSearch App
+```--update``` : Remove MacTerminalSearch and then install the most recent version.
 
-```--uninstall``` : This will remove the MacTerminalSearch App and all config files
+```--uninstall``` : Remove MacTerminalSearch and all config files.
 
 
