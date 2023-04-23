@@ -1,5 +1,5 @@
 import os
-from config import install_folder
+from imports.config import install_folder
 from pathlib import Path
 
 
