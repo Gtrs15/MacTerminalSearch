@@ -37,7 +37,7 @@ class ProgramInstallation:
     def create_empty_folders_logs_and_config(self):
         # mkdir for install, might ask for user password
         os.system(f'mkdir {self.app_folder}/logs')
-        os.system(f'mkdir {self.app_folder}/config')
+        os.system(f'mkdir {self.app_folder}/config_files')
 
     def echo_alias_to_zshrc(self):
         self.check_if_zshrc_exists()
