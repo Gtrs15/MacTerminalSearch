@@ -2,11 +2,11 @@ from pathlib import Path
 
 home_dir = Path().home()
 
-install_folder = Path('/Users/Shared/.terminalSearchApp')
+install_folder = Path('/Users/Shared/.MacTerminalSearch')
 app_folder = home_dir / 'PycharmProjects' / 'MacTerminalSearch' # For development
 
-settings_json = app_folder / 'config_files' / 'search_config.json'
-
+settings_json = install_folder / 'config_files' / 'search_config.json'
+settings_json_development = app_folder / 'config_files' / 'search_config.json'
 
 help_message = f'''
 Welcome to terminalSearch
