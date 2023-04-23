@@ -23,15 +23,15 @@ Any alias can be used if you are already using ```ts``` for something else.
 
 ```-g``` Used to do a normal google search and not limit search to site list.
 
-Example usage: ts -g python selenium documentation
+Example usage: ```ts -g python selenium documentation```
 
 ```-d <SITE_KEY>``` : delete a website from the site list (don't include .com)
 
-Example usage: ts -d stackoverflow (can also use any non-blank string to check site_list)
+Example usage: ```ts -d stackoverflow``` (can also use any non-blank string to check site_list)
 
 ```-a <SITE_URL>``` : add a site to the site list (Do not need https or WWW in URL)
 
-Example usage: ts -a stackoverflow.com
+Example usage: ```ts -a stackoverflow.com```
 
 ```--update``` : Remove MacTerminalSearch and then install the most recent version.
 
