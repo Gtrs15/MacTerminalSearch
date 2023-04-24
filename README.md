@@ -23,10 +23,16 @@ Example: ```alias ts="python3 /Users/Shared/.MacTerminalSearch/start.py"```
 
 Any alias can be used if you are already using ```ts``` for something else.  
 
+# Usage 
+
+Use the command ```ts``` (or the custom alias) to search with site contraints of only websites added by the user.  
+
+Use the options shown below to make changes after initial setup.  
+
 
 ## Options
 
-```-g``` Used to do a normal google search and not limit search to site list.
+```-g``` Do a normal google search and not limit search to site list.
 
 Example usage: ```ts -g python selenium documentation```
 
