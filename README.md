@@ -13,15 +13,15 @@ After you run the .app file, you can launch any new instance of terminal and use
 
 If you would prefer to manually install, here are the instructions:
 
-Run the following command.
+Run the following commands.
 
 	git clone https://github.com/Gtrs15/MacTerminalSearch.git /Users/Shared/.MacTerminalSearch
 
-Once complete, add an alias to your .zshrc or .bashrc file for quicker execution of the app.
+	echo 'alias ts="python3 /Users/Shared/.MacTerminalSearch/start.py"' >> ~/.zshrc
 
-Example: ```alias ts="python3 /Users/Shared/.MacTerminalSearch/start.py"```
+You can replace the ```~/.zshrc``` with ```~/.bashrc``` if you use bash as your default shell. 
 
-Any alias can be used if you are already using ```ts``` for something else.  
+Any alias can be used if you are already using ```ts``` for something else, or if you  prefer a different one.
 
 # Usage 
 
