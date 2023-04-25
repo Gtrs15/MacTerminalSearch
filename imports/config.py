@@ -9,7 +9,7 @@ settings_json = install_folder / 'config_files' / 'search_config.json'
 settings_json_development = app_folder / 'config_files' / 'search_config.json'
 
 help_message = f'''
-Welcome to terminalSearch
+Welcome to MacTerminalSearch
 
   Usage Options:
 -------------------------------------  
