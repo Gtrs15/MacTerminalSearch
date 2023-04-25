@@ -12,11 +12,17 @@ Python3
 
 
 
-## Installation
+# Installation
+
+
+## Easy Install
+
 
 [The app can be installed from the zip file contained in the release.](https://github.com/Gtrs15/MacTerminalSearch/releases/tag/Initial_Release)
 
 After you run the .app file, you can launch any new instance of terminal and use the command ```ts``` to use the app.
+
+## Manual Installation
 
 
 If you would prefer to manually install, here are the instructions:
