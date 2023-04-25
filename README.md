@@ -3,6 +3,10 @@
 MacTerminalSearch is a tool that enables google search functionality directly from your terminal.  
 Type your entire search without leaving your editor/terminal.
 
+## Requirements
+
+Python3
+
 
 ## Installation
 
