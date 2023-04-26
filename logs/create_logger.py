@@ -1,5 +1,5 @@
 import logging
-from imports.config import app_folder
+from imports.config import install_folder as app_folder
 import os
 
 
