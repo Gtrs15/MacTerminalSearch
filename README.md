@@ -35,21 +35,28 @@ If you would prefer to manually install, here are the instructions:
 
 Run the following commands.
 
-Clone app to directory:
+
+Step 1: Clone app to directory:
+
 
 	git clone https://github.com/Gtrs15/MacTerminalSearch.git /Users/Shared/.MacTerminalSearch
 
-Add alias to zshrc file:
 
-	echo 'alias ts="python3 /Users/Shared/.MacTerminalSearch/start.py"' >> ~/.zshrc
-
-Lastly, make a folder for the config file
-
-	mkdir /Users/Shared/.MacTerminalSearch/config_files
+Step 2: Add alias to zshrc file:
 
 You can replace the ```~/.zshrc``` with ```~/.bashrc``` if you use bash as your default shell. 
 
 Any alias can be used if you are already using ```ts``` for something else, or if you  prefer a different one.
+
+
+	echo 'alias ts="python3 /Users/Shared/.MacTerminalSearch/start.py"' >> ~/.zshrc
+
+
+Step 3: Lastly, make a folder for the config file
+
+
+	mkdir /Users/Shared/.MacTerminalSearch/config_files
+
 
 
 
