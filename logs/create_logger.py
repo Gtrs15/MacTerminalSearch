@@ -1,5 +1,5 @@
 import logging
-from imports.config import cwd
+from imports.config import install_folder
 import os
 
 
@@ -64,14 +64,14 @@ class Logger:
 
 
 def create_logger():
-    log_path = cwd / 'logs' / 'log.log'
-    log_path_pers = cwd / 'logs' / 'log.log'
+    log_path = install_folder / 'logs' / 'log.log'
+    log_path_pers = install_folder / 'logs' / 'log.log'
     # Attempt to create logger, will create folders if not done already
     try:
         log_object = Logger('INFO',log_path, log_path_pers)
     except FileNotFoundError:
-        os.system(f'mkdir {cwd}/logs')
-        os.system(f'mkdir {cwd}/config')
+        os.system(f'mkdir {install_folder}/logs')
+        os.system(f'mkdir {install_folder}/config')
         log_object = Logger('INFO',log_path, log_path_pers)
     return log_object
 
