@@ -88,6 +88,7 @@ class BrowserLauncher:
                 site_list = settings.read_json()['site_list']
                 print(f'New List:')
                 print([(f'{site_list[x]}') for x in site_list])
+                logs.log_info([(f'{site_list[x]}') for x in site_list])
             except:
                 print('Invalid Site Addition')
 
@@ -98,6 +99,7 @@ class BrowserLauncher:
             print(f'Deleted {site_index} from site_list.\nNew List:')
             site_list = settings.read_json()['site_list']
             print(*[x for x in site_list])
+            logs.log_info(*[x for x in site_list])
             
         # Show Help Message
         if self.flag == '-h':
@@ -111,6 +113,7 @@ class BrowserLauncher:
             print('MacTerminalSearch will now update.')
             ProgramInstallation().update()
             print('Update Complete')
+            logs.log_info('Update Complete')
 
         # Uninstall App
         if self.flag == '--uninstall':
