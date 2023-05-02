@@ -1,4 +1,4 @@
-# This will automate the build and release of the run_installation.app file
+# This will automate the build and release of the .dmg file
 
 
 name: Automatic_Release
@@ -36,19 +36,10 @@ jobs:
             - name: Show contents of Release.txt
               run: cat Release.txt
 
-
-    build-release:
-        runs-on: ubuntu-latest
-        needs: create_Release_File
-        steps:
-            - name: Set tag name var
-              run: echo "tag=$(sed -n 1p RELEASE_VERSION)" >> $GITHUB_ENV
-
             - name: Build Release and Upload to Github
               uses: softprops/action-gh-release@v1
               with:
                   tag_name: ${{ env.tag }}
                   files: |
                       Release.txt
-
 
