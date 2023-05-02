@@ -1,6 +1,63 @@
 # This will automate the build and release of the run_installation.app file
 
 
+name: Automatic_Release
+
+on:
+    # push:
+        # branches: [ "main" ]
+        # branches: ["None"]
+    # Allows action to be ran from github repo
+    workflow_dispatch:
+
+jobs:
+    build-release:
+        runs-on: ubuntu-latest
+        steps:
+
+            - name: Checkout current branch
+              uses: actions/checkout@v3
+
+            - name: Set env vars
+              run: |
+                  echo "tag=$(sed -n 1p RELEASE_VERSION)" >> $GITHUB_ENV
+                  cat RELEASE_VERSION
+
+            - name: Check env vars
+              run: |
+                  echo ${{ env.tag }}
+                  # sed -n 2p RELEASE_VERSION
+
+            - name: Create and Date Stamp Release.txt
+              run: |
+                  echo ${{ github.sha }} > Release.txt
+                  echo ${{ env.tag }} >> Release.txt
+                  echo "$(TZ=America/Los_Angeles date)" >> Release.txt
+
+            - name: Show contents of Release.txt
+              run: cat Release.txt
+
+            - name: Install "Zip"
+              run: |
+                  sudo apt-get install zip -y
+
+
+            - name: Build run_installation.app file
+              run: |
+                  python3 -m pip install --upgrade pip
+                  python3 pip install py2app
+                  python3 imports/py2app_setup.py py2app
+
+            - name: Zip run_installation.app into "install.zip"
+              run: zip -r install.zip dist
+
+            - name: Build Release and Upload to Github
+              uses: softprops/action-gh-release@v1
+              with:
+                  tag_name: ${{ env.tag }}
+                  files: |
+                      Release.txt
+                      install.zip
 
 
 
