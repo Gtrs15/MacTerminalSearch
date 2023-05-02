@@ -11,10 +11,9 @@ on:
     workflow_dispatch:
 
 jobs:
-    build-release:
+    create_Release_File:
         runs-on: ubuntu-latest
         steps:
-
             - name: Checkout current branch
               uses: actions/checkout@v3
 
@@ -37,22 +36,11 @@ jobs:
             - name: Show contents of Release.txt
               run: cat Release.txt
 
-            - name: Install "Zip"
-              run: |
-                  sudo apt-get install zip -y
-                  sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev wget curl llvm libncurses5-dev
 
-            - name: Build run_installation.app file
-              run: |
-                  python3 -m venv venv
-                  source venv/bin/activate
-                  make install
-                  python3 -m pip install --upgrade pip
-                  pip install py2app
-                  python3 imports/py2app_setup.py py2app
-
-            - name: Zip run_installation.app into "install.zip"
-              run: zip -r install.zip dist
+    build-release:
+        runs-on: ubuntu-latest
+        needs: create_Release_File
+        steps:
 
             - name: Build Release and Upload to Github
               uses: softprops/action-gh-release@v1
@@ -60,7 +48,5 @@ jobs:
                   tag_name: ${{ env.tag }}
                   files: |
                       Release.txt
-                      install.zip
-
 
 
