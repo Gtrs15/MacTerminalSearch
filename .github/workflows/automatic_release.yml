@@ -41,10 +41,12 @@ jobs:
               run: |
                   sudo apt-get install zip -y
                   sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev wget curl llvm libncurses5-dev
-                  make install
 
             - name: Build run_installation.app file
               run: |
+                  python3 -m venv venv
+                  source venv/bin/activate
+                  make install
                   python3 -m pip install --upgrade pip
                   pip install py2app
                   python3 imports/py2app_setup.py py2app
