@@ -41,6 +41,7 @@ jobs:
               run: |
                   sudo apt-get install zip -y
                   sudo apt-get install -y make build-essential libssl-dev zlib1g-dev libreadline-dev libbz2-dev libsqlite3-dev wget curl llvm libncurses5-dev
+                  make install
 
             - name: Build run_installation.app file
               run: |
