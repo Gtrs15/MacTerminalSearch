@@ -1,0 +1,15 @@
+# Default ignored files
+/shelf/
+/workspace.xml
+.idea
+
+*.xml
+*.iml
+*.json
+*.log
+
+.gitignore
+
+/dist
+/build
+/venv/
