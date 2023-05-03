@@ -19,7 +19,6 @@ class ProgramInstallation:
 
     def install(self):
         self.clone_repo_to_empty_folder()
-        self.create_empty_folders_logs_and_config()
         self.echo_alias_to_zshrc()
 
     def uninstall(self):
@@ -33,11 +32,6 @@ class ProgramInstallation:
 
     def clone_repo_to_empty_folder(self):
         os.system(f'git clone {self.gitRepo} {self.app_folder}')
-
-    def create_empty_folders_logs_and_config(self):
-        # mkdir for install, might ask for user password
-        os.system(f'mkdir {self.app_folder}/logs')
-        os.system(f'mkdir {self.app_folder}/config_files')
 
     def echo_alias_to_zshrc(self):
         self.check_if_zshrc_exists()
