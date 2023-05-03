@@ -15,23 +15,6 @@ Python3
 # Installation
 
 
-## Easy Install
-
-
-[The app can be installed from the zip file contained in the release.](https://github.com/Gtrs15/MacTerminalSearch/releases/tag/Initial_Release)
-
-Download the file named "run_installation.zip"
-
-Unzip the .app file contained inside
-
-Run the .app file
-
-After you run the .app file, you can launch any new instance of terminal and use the command ```ts``` to use the app.
-
-## Manual Install
-
-
-If you would prefer to manually install, here are the instructions:
 
 Run the following commands.
 
@@ -51,11 +34,6 @@ Any alias can be used if you are already using ```ts``` for something else, or i
 
 	echo 'alias ts="python3 /Users/Shared/.MacTerminalSearch/start.py"' >> ~/.zshrc
 
-
-Step 3: Lastly, make a folder for the config file
-
-
-	mkdir /Users/Shared/.MacTerminalSearch/config_files
 
 
 
