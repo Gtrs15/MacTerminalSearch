@@ -6,8 +6,8 @@ cwd = Path.cwd()
 install_folder = Path('/Users/Shared/.MacTerminalSearch')
 app_folder = home_dir / 'PycharmProjects' / 'MacTerminalSearch' # For development
 
-settings_json = install_folder / 'config_files' / 'search_config.json'
-settings_json_development = cwd / 'config_files' / 'search_config.json'
+settings_json = install_folder / 'search_config.json'
+settings_json_development = cwd / 'search_config.json'
 
 help_message = f'''
 Welcome to MacTerminalSearch
